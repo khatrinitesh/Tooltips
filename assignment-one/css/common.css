@@ -1,0 +1,140 @@
+body
+{
+    font-family: Ubuntu, sans-serif;
+    color: #111;
+    background: #fff url( 'bg.gif' ) repeat 0 0;
+    overflow: hidden;
+}
+
+#container
+{
+    width: 1170px;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 440px)
+{
+    #container
+    {
+        width: 100%;
+        position: static;
+        top: auto;
+        left: auto;
+        padding: 30px 20px;
+        margin: 0;
+    }
+}
+
+@media screen and (max-height: 340px)
+{
+    #container
+    {
+        position: static;
+        top: auto;
+        left: auto;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        margin: 0 auto;
+    }
+}
+
+#container p
+{
+    text-align: justify;
+    text-shadow: 0 1px 0 rgba( 255, 255, 255, .5 );
+    line-height: 1.85;
+}
+#container a
+{
+    color: #84e100;
+    text-decoration: none;
+}
+#container a:hover
+{
+    color: #6fbc00;
+}
+
+#container abbr
+{
+    border-style: dotted;
+    border-color: #111;
+    border-width: 0 0 1px;
+    cursor: help;
+}
+
+#info abbr
+{    
+    width: 60px;
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 50px;
+    text-align: center;
+    text-shadow: 0 1px rgba( 0, 0, 0, .25 );
+    color: #333;
+    border: none;
+    cursor: pointer;
+    display: block;
+    float: left;
+    margin: 10px;
+
+}
+
+#info
+{
+    text-decoration: none;
+}
+
+
+/*===================================================
+                    TOOLTIP
+===================================================*/
+#tooltip
+{
+    text-align: center;
+    color: #000;
+    background: #f3f3f3; /* Old Browsers */
+    background: -webkit-linear-gradient(bottom top,#f3f3f3,#d2d2d2); /*Safari 5.1-6*/
+    background: -o-linear-gradient(bottom top,#f3f3f3,#d2d2d2); /*Opera 11.1-12*/
+    background: -moz-linear-gradient(bottom top,#f3f3f3,#d2d2d2); /*Fx 3.6-15*/
+    background: linear-gradient(bottom top, #f3f3f3, #d2d2d2); /*Standard*/
+    position: absolute;
+    z-index: 100;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+#tooltip::after /* triangle decoration */
+{
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #ccc;
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    margin-left: -10px;
+}
+
+#tooltip.top::after
+{
+    border-top-color: transparent;
+    border-bottom: 10px solid #f3f3f3;
+    top: -20px;
+    bottom: auto;
+}
+
+#tooltip.left::after
+{
+    left: 10px;
+    margin: 0;
+}
+
+#tooltip.right::after
+{
+    right: 10px;
+    left: auto;
+    margin: 0;
+}
